@@ -1,1 +1,0 @@
-Simple Python Chat build using django
