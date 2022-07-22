@@ -5,5 +5,11 @@ class Message(models.Model):
     msg = models.CharField(max_length=280)
     pub_date = models.DateTimeField('date published')
     def __str__(self):
+        timestamp = str(self.pub_date).split('.')[0]
+        timestamp_time = timestamp.split(' ')[1]
+        timestamp = timestamp.split(' ')[0]
+        timestamp = f"{timestamp.split('-')[2]}.{timestamp.split('-')[1]}.{timestamp.split('-')[0]} {timestamp_time}"
 
-        return f"{str(self.user_name)} [{str(self.pub_date).split(' ')[1].split('.')[0]}]: {str(self.msg)}"
+        name = str(self.user_name)
+        message = str(self.msg)
+        return f"[{timestamp}] {name}: {message}"
