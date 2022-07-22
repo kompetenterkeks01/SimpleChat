@@ -12,6 +12,7 @@ body {
     font-weight: 500;
     font-size: 1.25rem;
     height: 100vh;
+    max-width: 100vw;
     padding: 0px;
     margin: 0px;
     display: flex;
@@ -44,9 +45,8 @@ body {
     width: 100vw;
 }
 
-.char_field {
+.input {
     font-size: 1.25rem;
-    width: calc(100vw - 16px);
     padding: 1.2rem 2rem;
     margin: .8rem .8rem;
     display: inline-block;
@@ -56,6 +56,18 @@ body {
     border: 1px solid;
     border-color: var(--main-lighter);
     border-radius: .5rem;
+}
+
+.char_field {
+    width: 100%;
+}
+
+.username {
+    min-width: calc(20vw - 32px);
+}
+
+.textbox {
+    display: flex;
 }
 
 .char_field:focus {

@@ -22,15 +22,11 @@
     <div class="controlls">
       <form action="/send" method="post">
         {% csrf_token %}
-        <fieldset>
-            <legend><h1>Neue Nachricht schreiben:</h1></legend>
-            <p>Benutzername:</p>
-            <input type="text" name="name" id="usernamefield" placeholder="Benutzer">
-            <p>Nachricht:</p>
-            <input type="text" name="msg" id="msgfield" placeholder="Nachricht">
-        </fieldset>
-        <input type="submit" value="Send">
-        </form>
+        <div class="textbox">
+          <input class="username input" type="text" name="name" placeholder="Benutzer">
+          <input class="char_field input" type="text" name="msg" placeholder="Sende Nachrichten mit Enter">
+        </div>
+      </form>
     </div>
   </body>
 </html>
