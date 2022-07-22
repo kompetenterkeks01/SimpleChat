@@ -16,13 +16,21 @@
         <div id="message_{{msg.id}}">{{msg}}</div>
       {% endfor %}
       {% else %}
-        <p>Keine Nachrichten!</p>
+        <div>Keine Nachrichten!</div>
       {% endif %}
     </div>
     <div class="controlls">
-      <form>
-        <input class="char_field" type="text" />
-      </form>
+      <form action="/send" method="post">
+        {% csrf_token %}
+        <fieldset>
+            <legend><h1>Neue Nachricht schreiben:</h1></legend>
+            <p>Benutzername:</p>
+            <input type="text" name="name" id="usernamefield" placeholder="Benutzer">
+            <p>Nachricht:</p>
+            <input type="text" name="msg" id="msgfield" placeholder="Nachricht">
+        </fieldset>
+        <input type="submit" value="Send">
+        </form>
     </div>
   </body>
 </html>

@@ -1,12 +1,15 @@
 :root {
-    font-size: 20px;
+    font-size: 10px;
     --main-color: #333;
     --main-darker: #222;
     --main-lighter: #999;
+    --sub-darker: #ccc;
     --sub-color: #eee;
 }
 
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
     font-size: 1.25rem;
     height: 100vh;
     padding: 0px;
@@ -18,13 +21,34 @@ body {
 
 .message_view {
     height: fit-content;
+    margin: 0;
+}
+
+.message_view > div{
+    padding: .4rem;
+    padding-left: 1rem;
+    border-top: var(--main-lighter) solid 1px;
+}
+
+.message_view > div:nth-child(even){
+    background-color: var(--sub-darker);
+}
+
+.message_view > div:nth-child(odd){
+    background-color: var(--sub-color);
+}
+
+.controlls {
+    border-top: var(--main-lighter) solid 1px;
+    box-sizing: border-box;
+    width: 100vw;
 }
 
 .char_field {
     font-size: 1.25rem;
-    width: 80%;
+    width: calc(100vw - 16px);
     padding: 1.2rem 2rem;
-    margin: 8px 8px;
+    margin: .8rem .8rem;
     display: inline-block;
     background-color: var(--sub-color);
     box-sizing: border-box;
