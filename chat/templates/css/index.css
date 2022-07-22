@@ -1,5 +1,5 @@
 :root {
-    font-size: 10px;
+    font-size: 20px;
     --main-color: #333;
     --main-darker: #222;
     --main-lighter: #999;
@@ -7,6 +7,7 @@
 }
 
 body {
+    font-size: 1.25rem;
     height: 100vh;
     padding: 0px;
     margin: 0px;
@@ -20,6 +21,7 @@ body {
 }
 
 .char_field {
+    font-size: 1.25rem;
     width: 80%;
     padding: 1.2rem 2rem;
     margin: 8px 8px;
