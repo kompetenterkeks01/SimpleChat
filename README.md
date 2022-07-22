@@ -7,4 +7,4 @@ A simple live chat app in written in python
 
 Django startup:
 
-SHELL: > $ python manage.py runserver PORT
+$ py manage.py runserver PORT
