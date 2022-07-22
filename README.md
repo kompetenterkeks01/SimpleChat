@@ -2,8 +2,8 @@
 
 A simple live chat app in written in python
 
-- [ ] Server
-- [ ] Client
+- [x] Server
+- [x] Client
 
 Django startup:
 
