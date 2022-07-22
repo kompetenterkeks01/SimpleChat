@@ -6,4 +6,4 @@ A simple live chat app in written in python
 - [ ] Client
 
 Django startup:
-- $ python manage.py runserver <PORT>
+SHELL: > $ python manage.py runserver PORT <
