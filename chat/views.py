@@ -14,6 +14,14 @@ def index(request):
     }
     return HttpResponse(template.render(context, request))
 
+def indexnogui(request):
+    allMsg = Message.objects.order_by('-id')
+    template = loader.get_template('index2.html')
+    context = {
+        'allMsg': allMsg[::-1],
+    }
+    return HttpResponse(template.render(context, request))
+
 def send(request):
     uname = request.POST['name']
     msg = request.POST['msg']
