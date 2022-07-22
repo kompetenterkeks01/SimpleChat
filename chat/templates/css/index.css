@@ -73,3 +73,7 @@ body {
 .char_field:focus {
     border: 1px solid 
 }
+
+.submit {
+    display: none;
+}
