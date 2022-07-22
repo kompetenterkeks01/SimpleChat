@@ -10,7 +10,15 @@
     <title>SimpleChat</title>
   </head>
   <body>
-    <div class="message_view"></div>
+    <div class="message_view">
+      {% if allMsg %}
+      {% for msg in allMsg %}
+        <div id="message_{{msg.id}}">{{msg}}</div>
+      {% endfor %}
+      {% else %}
+        <p>Keine Nachrichten!</p>
+      {% endif %}
+    </div>
     <div class="controlls">
       <form>
         <input type="text" />
